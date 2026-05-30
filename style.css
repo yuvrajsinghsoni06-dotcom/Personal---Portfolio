@@ -1,0 +1,267 @@
+/* --- 1. Master Palette & Typography --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+    /* The Dark Identity (Onyx & Slate) */
+    --onyx: #0a0a0a;
+    --onyx-surface: #121212;
+    --dark-text: #ededed;
+    --dark-muted: #888888;
+    --dark-border: #262626;
+
+    /* The Light Identity (Alabaster & Ash) */
+    --alabaster: #fafafa;
+    --alabaster-surface: #ffffff;
+    --light-text: #111111;
+    --light-muted: #666666;
+    --light-border: #e5e5e5;
+
+    /* The Signature Accent (Precision Cyan/Blue) */
+    --accent: #0070f3; /* An authoritative, highly legible tech blue */
+    --accent-glow: rgba(0, 112, 243, 0.15);
+
+    /* Structural Variables */
+    --radius: 2px; /* Sharp, engineered corners. Not childish or bouncy. */
+    --transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1); /* Snappy, hardware-like transitions */
+    
+    /* Fonts */
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace; /* The developer's signature */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--onyx);
+    color: var(--dark-text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    /* The Blueprint / Matrix Grid - Subtle and professional */
+    background-image: linear-gradient(var(--dark-border) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--dark-border) 1px, transparent 1px);
+    background-size: 60px 60px;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- 2. Typography --- */
+h1, h2, h3 {
+    font-weight: 700;
+    letter-spacing: -0.04em; /* Tight, editorial tracking */
+}
+
+h2 {
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* The Monospace Header Prefix (Your digital footprint) */
+h2::before {
+    content: ">>";
+    font-family: var(--font-mono);
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.125rem;
+    max-width: 70ch; /* Optimal reading width */
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+/* --- 3. Navigation (Minimal & Sharp) --- */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    background-color: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.logo {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--dark-text);
+    letter-spacing: -0.05em;
+}
+
+/* Adds a blinking cursor effect to the logo on hover */
+.logo:hover::after {
+    content: "_";
+    animation: blink 1s step-end infinite;
+}
+
+nav ul { display: flex; list-style: none; gap: 2.5rem; }
+nav a {
+    color: var(--dark-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: var(--transition);
+}
+
+nav a:hover, nav a.active { color: var(--dark-text); }
+
+/* --- 4. Hero Section (The Dark Focus) --- */
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+    background: radial-gradient(circle at 50% 0%, var(--accent-glow) 0%, transparent 50%);
+}
+
+.headline {
+    font-size: 5rem;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+}
+
+.subtext {
+    font-size: 1.25rem;
+    color: var(--dark-muted);
+    margin-bottom: 3rem;
+}
+
+/* --- 5. About & Toolset (The Light Balance) --- */
+/* A stark, highly professional transition to off-white */
+.philosophy-section, .toolset-section {
+    background-color: var(--alabaster);
+    color: var(--light-text);
+    padding: 8rem 0;
+    border-top: 1px solid var(--light-border);
+    /* Removing the grid for the light section to keep it clean */
+    background-image: none; 
+}
+
+.philosophy-section p { color: var(--light-muted); }
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.bento-box {
+    background: var(--alabaster-surface);
+    padding: 2.5rem;
+    border: 1px solid var(--light-border);
+    border-radius: var(--radius);
+    transition: var(--transition);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.bento-box:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 112, 243, 0.08);
+}
+
+.skills-list { list-style: none; }
+.skills-list li {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: var(--light-muted);
+    display: flex;
+    align-items: center;
+}
+
+.skills-list li::before {
+    content: "✓";
+    color: var(--accent);
+    margin-right: 0.75rem;
+}
+
+/* --- 6. Projects Section (Return to Onyx) --- */
+.projects-section {
+    background-color: var(--onyx);
+    padding: 8rem 0;
+    border-top: 1px solid var(--dark-border);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--onyx-surface);
+    padding: 2.5rem;
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.card:hover {
+    border-color: var(--dark-muted);
+    background: #181818;
+}
+
+.card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+.card p { color: var(--dark-muted); flex-grow: 1; margin-bottom: 2rem; }
+
+/* The Data/MLOps Tags */
+.tag-container { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--dark-text);
+    background: transparent;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius);
+}
+
+/* --- 7. Buttons (Engineered Logic) --- */
+.button-group { display: flex; gap: 1rem; }
+.btn {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    padding: 0.85rem 2rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: var(--transition);
+    cursor: pointer;
+    letter-spacing: 0.05em;
+}
+
+/* High contrast primary button */
+.primary-btn {
+    background: var(--dark-text);
+    color: var(--onyx);
+    border: 1px solid var(--

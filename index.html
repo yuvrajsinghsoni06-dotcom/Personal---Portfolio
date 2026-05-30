@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Frontend & MLOps Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav id="nav">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo"><span class="mono">~/</span>dev</a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#stack" class="nav-link">Stack</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link cta-link">Contact</a></li>
+            </ul>
+            <button class="burger" id="burger" aria-label="Menu">
+                <span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+        </div>
+
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hero-eyebrow fade-up" style="--delay:0s"><span class="mono accent">&gt; init</span> &nbsp;Available for internship · 2026</p>
+                <h1 class="hero-title fade-up" style="--delay:.1s">
+                    Building systems<br>
+                    <em>that think</em><br>
+                    and interfaces<br>
+                    <em>that feel.</em>
+                </h1>
+                <p class="hero-sub fade-up" style="--delay:.22s">
+                    Frontend engineer & MLOps student. I obsess over the full arc — pixel‑perfect UI to efficient model deployment pipelines.
+                </p>
+                <div class="hero-actions fade-up" style="--delay:.34s">
+                    <a href="#projects" class="btn-primary">View Projects</a>
+                    <a href="resume.pdf" class="btn-ghost" target="_blank">Résumé ↗</a>
+                </div>
+            </div>
+
+            <div class="hero-card fade-up" style="--delay:.28s">
+                <div class="terminal">
+                    <div class="terminal-bar">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="terminal-title mono">pipeline.py</span>
+                    </div>
+                    <div class="terminal-body mono" id="terminal-body">
+                        <div class="t-line"><span class="t-dim">01</span> <span class="t-kw">import</span> pandas <span class="t-kw">as</span> pd</div>
+                        <div class="t-line"><span class="t-dim">02</span> <span class="t-kw">from</span> sklearn.pipeline <span class="t-kw">import</span> Pipeline</div>
+                        <div class="t-line"><span class="t-dim">03</span> </div>
+                        <div class="t-line"><span class="t-dim">04</span> <span class="t-comment"># Optimize. Deploy. Monitor.</span></div>
+                        <div class="t-line"><span class="t-dim">05</span> pipeline = Pipeline([</div>
+                        <div class="t-line"><span class="t-dim">06</span> &nbsp;&nbsp;<span class="t-str">'scaler'</span>, StandardScaler(),</div>
+                        <div class="t-line"><span class="t-dim">07</span> &nbsp;&nbsp;<span class="t-str">'model'</span>, XGBoostClassifier()</div>
+                        <div class="t-line"><span class="t-dim">08</span> ])</div>
+                        <div class="t-line"><span class="t-dim">09</span> pipeline.fit(X_train, y_train)</div>
+                        <div class="t-line t-cursor"><span class="t-dim">10</span> <span class="cursor-block">█</span></div>
+                    </div>
+                </div>
+
+                <div class="stat-strip">
+                    <div class="stat">
+                        <span class="stat-n accent mono">3</span>
+                        <span class="stat-l">Live Projects</span>
+                    </div>
+                    <div class="stat-div"></div>
+                    <div class="stat">
+                        <span class="stat-n accent mono">5+</span>
+                        <span class="stat-l">Tech Domains</span>
+                    </div>
+                    <div class="stat-div"></div>
+                    <div class="stat">
+                        <span class="stat-n accent mono">0</span>
+                        <span class="stat-l">Spaghetti Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-cue">
+            <span class="mono">scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-label mono">01 &mdash; about</div>
+            <div class="about-grid">
+                <div class="about-headline">
+                    <h2>Engineering is about<br><em>removing friction</em> —<br>not adding features.</h2>
+                </div>
+                <div class="about-body">
+                    <p>
+                        I'm a student developer at the intersection of frontend craft and MLOps infrastructure. My work centers on a single conviction: <strong>great systems minimize waste.</strong>
+                    </p>
+                    <p>
+                        Whether I'm building a zero-latency UI or containerizing a model deployment pipeline, the question is always the same — <em>what can we cut without losing value?</em>
+                    </p>
+                    <p>
+                        Currently exploring how modern frontend paradigms and lean ML deployment can converge into tools people actually want to use.
+                    </p>
+                    <div class="about-tags">
+                        <span class="chip">Open to Full-Time</span>
+                        <span class="chip">Open to Internships</span>
+                        <span class="chip">Remote Friendly</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STACK -->
+    <section id="stack" class="stack-section">
+        <div class="container">
+            <div class="section-label mono">02 &mdash; technical stack</div>
+            <h2 class="section-title">What I build <em>with</em>.</h2>
+
+            <div class="stack-grid">
+
+                <div class="stack-col">
+                    <div class="stack-header mono">Frontend</div>
+                    <ul class="stack-list">
+                        <li><span class="stack-dot"></span>Semantic HTML5 &amp; CSS3</li>
+                        <li><span class="stack-dot"></span>Vanilla JavaScript (ES2022+)</li>
+                        <li><span class="stack-dot"></span>Performance &amp; Web Vitals</li>
+                        <li><span class="stack-dot"></span>Accessibility (WCAG 2.1)</li>
+                    </ul>
+                </div>
+
+                <div class="stack-col">
+                    <div class="stack-header mono">Data Science</div>
+                    <ul class="stack-list">
+                        <li><span class="stack-dot"></span>Python &amp; Pandas</li>
+                        <li><span class="stack-dot"></span>Scikit-Learn</li>
+                        <li><span class="stack-dot"></span>PyTorch / TensorFlow</li>
+                        <li><span class="stack-dot"></span>Data visualization</li>
+                    </ul>
+                </div>
+
+                <div class="stack-col stack-col--featured">
+                    <div class="stack-header mono">MLOps</div>
+                    <ul class="stack-list">
+                        <li><span class="stack-dot"></span>Docker &amp; Containerization</li>
+                        <li><span class="stack-dot"></span>Git &amp; CI/CD Pipelines</li>
+                        <li><span class="stack-dot"></span>Model Monitoring</li>
+                        <li><span class="stack-dot"></span>Cloud Deployment</li>
+                    </ul>
+                    <div class="stack-badge mono">Core Specialization</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-label mono">03 &mdash; selected work</div>
+            <h2 class="section-title">The Efficiency Lab.</h2>
+
+            <div class="projects-list">
+
+                <article class="project-row" data-index="01">
+                    <div class="project-meta">
+                        <span class="project-num mono">01</span>
+                        <div class="project-tags">
+                            <span class="ptag">MLOps</span>
+                            <span class="ptag">Dashboard</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Data Pipeline Optimizer</h3>
+                        <p>A lightweight CI/CD dashboard for ML model deployment. Tracks pipeline health, deployment frequency, and failure rates — cutting deployment overhead through real-time observability.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" aria-label="View project">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-row" data-index="02">
+                    <div class="project-meta">
+                        <span class="project-num mono">02</span>
+                        <div class="project-tags">
+                            <span class="ptag">Frontend</span>
+                            <span class="ptag">ML</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Minimalist Predictor</h3>
+                        <p>Zero-dependency frontend paired with a Scikit-Learn inference backend. Proves production ML tools don't need bloated frameworks — sub-50ms UI, under 20KB total bundle.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" aria-label="View project">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-row" data-index="03">
+                    <div class="project-meta">
+                        <span class="project-num mono">03</span>
+                        <div class="project-tags">
+                            <span class="ptag">Algorithm</span>
+                            <span class="ptag">Visualization</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Resource Tracker</h3>
+                        <p>Algorithm-based planner visualizing computational energy ROI across cloud workloads. Helps teams make data-driven infrastructure decisions before committing compute budget.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" aria-label="View project">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / FOOTER -->
+    <footer id="contact" class="contact-section">
+        <div class="contact-inner">
+            <div class="contact-bg">
+                <div class="blob blob-3"></div>
+            </div>
+            <div class="section-label mono" style="color: rgba(255,255,255,.4)">04 &mdash; contact</div>
+            <h2 class="contact-title">Let's build something<br><em>worth shipping.</em></h2>
+            <p class="contact-sub">Open to internship roles, research collaborations, and interesting problems.</p>
+            <div class="contact-actions">
+                <a href="mailto:your@email.com" class="btn-primary">your@email.com ↗</a>
+                <a href="resume.pdf" target="_blank" class="btn-ghost-light">Résumé (PDF)</a>
+            </div>
+            <div class="footer-bar">
+                <span class="mono footer-copy">&copy; 2026 — Built for signal, not noise.</span>
+                <div class="social-links">
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>

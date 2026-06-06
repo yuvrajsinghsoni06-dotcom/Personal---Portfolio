@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio — Frontend & MLOps Engineer</title>
+    <title>Yuvraj Singh Soni — Frontend & MLOps Engineer</title>
+    <meta name="description" content="Portfolio of Yuvraj Singh Soni, a Frontend & MLOps Engineer specializing in building efficient ML pipelines and pixel-perfect user interfaces.">
+    <meta name="author" content="Yuvraj Singh Soni">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -14,7 +16,7 @@
     <!-- NAV -->
     <nav id="nav">
         <div class="nav-inner">
-            <a href="#home" class="nav-logo"><span class="mono">~/</span>dev</a>
+            <a href="#home" class="nav-logo">yuvraj<span class="mono">.dev</span></a>
             <ul class="nav-links">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#stack" class="nav-link">Stack</a></li>
@@ -62,16 +64,17 @@
                         <span class="terminal-title mono">pipeline.py</span>
                     </div>
                     <div class="terminal-body mono" id="terminal-body">
-                        <div class="t-line"><span class="t-dim">01</span> <span class="t-kw">import</span> pandas <span class="t-kw">as</span> pd</div>
-                        <div class="t-line"><span class="t-dim">02</span> <span class="t-kw">from</span> sklearn.pipeline <span class="t-kw">import</span> Pipeline</div>
-                        <div class="t-line"><span class="t-dim">03</span> </div>
-                        <div class="t-line"><span class="t-dim">04</span> <span class="t-comment"># Optimize. Deploy. Monitor.</span></div>
-                        <div class="t-line"><span class="t-dim">05</span> pipeline = Pipeline([</div>
-                        <div class="t-line"><span class="t-dim">06</span> &nbsp;&nbsp;<span class="t-str">'scaler'</span>, StandardScaler(),</div>
-                        <div class="t-line"><span class="t-dim">07</span> &nbsp;&nbsp;<span class="t-str">'model'</span>, XGBoostClassifier()</div>
-                        <div class="t-line"><span class="t-dim">08</span> ])</div>
-                        <div class="t-line"><span class="t-dim">09</span> pipeline.fit(X_train, y_train)</div>
-                        <div class="t-line t-cursor"><span class="t-dim">10</span> <span class="cursor-block">█</span></div>
+                        <div class="t-line"><span class="t-dim">01</span> <span class="t-kw">from</span> sklearn.pipeline <span class="t-kw">import</span> Pipeline</div>
+                        <div class="t-line"><span class="t-dim">02</span> <span class="t-kw">from</span> sklearn.preprocessing <span class="t-kw">import</span> StandardScaler</div>
+                        <div class="t-line"><span class="t-dim">03</span> <span class="t-kw">import</span> xgboost <span class="t-kw">as</span> xgb</div>
+                        <div class="t-line"><span class="t-dim">04</span> </div>
+                        <div class="t-line"><span class="t-dim">05</span> <span class="t-comment"># Optimize. Deploy. Monitor.</span></div>
+                        <div class="t-line"><span class="t-dim">06</span> pipeline = Pipeline([</div>
+                        <div class="t-line"><span class="t-dim">07</span> &nbsp;&nbsp;(<span class="t-str">'scaler'</span>, StandardScaler()),</div>
+                        <div class="t-line"><span class="t-dim">08</span> &nbsp;&nbsp;(<span class="t-str">'model'</span>, xgb.XGBClassifier())</div>
+                        <div class="t-line"><span class="t-dim">09</span> ])</div>
+                        <div class="t-line"><span class="t-dim">10</span> pipeline.fit(X_train, y_train)</div>
+                        <div class="t-line t-cursor"><span class="t-dim">11</span> <span class="cursor-block">█</span></div>
                     </div>
                 </div>
 
@@ -122,6 +125,43 @@
                         <span class="chip">Open to Full-Time</span>
                         <span class="chip">Open to Internships</span>
                         <span class="chip">Remote Friendly</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRAJECTORY TIMELINE -->
+            <div class="trajectory-wrapper">
+                <div class="section-label-sub mono">trajectory</div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-meta">
+                            <span class="timeline-date mono">2023 &mdash; 2024</span>
+                            <span class="timeline-phase mono">01 / Foundation</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Academic Rigor & UI Craft</h3>
+                            <p>Mastered computer science fundamentals and advanced algorithms while honing frontend development. Specialized in semantic HTML/CSS, performance optimization, and accessibility to build smooth, zero-latency user interfaces.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-meta">
+                            <span class="timeline-date mono">2024 &mdash; 2025</span>
+                            <span class="timeline-phase mono">02 / Pivot</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Data Science Integration</h3>
+                            <p>Expanded skills into statistical modeling, machine learning, and quantitative analysis. Worked extensively with Python, Pandas, and Scikit-Learn to preprocess complex datasets and build robust predictive models.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-meta">
+                            <span class="timeline-date mono">2025 &mdash; Present</span>
+                            <span class="timeline-phase mono">03 / Focus</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Mastering MLOps & Pipelines</h3>
+                            <p>Bridging the gap between Jupyter notebooks and high-availability production environments. Focused on Docker containerization, automated CI/CD deployment pipelines, model observability, and cloud optimization.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -250,14 +290,14 @@
             <h2 class="contact-title">Let's build something<br><em>worth shipping.</em></h2>
             <p class="contact-sub">Open to internship roles, research collaborations, and interesting problems.</p>
             <div class="contact-actions">
-                <a href="mailto:your@email.com" class="btn-primary">your@email.com ↗</a>
+                <a href="mailto:yuvrajsinghsoni06@gmail.com" class="btn-primary">yuvrajsinghsoni06@gmail.com ↗</a>
                 <a href="resume.pdf" target="_blank" class="btn-ghost-light">Résumé (PDF)</a>
             </div>
             <div class="footer-bar">
                 <span class="mono footer-copy">&copy; 2026 — Built for signal, not noise.</span>
                 <div class="social-links">
-                    <a href="#" class="social-link">GitHub</a>
-                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="https://github.com/yuvrajsinghsoni06" target="_blank" class="social-link">GitHub</a>
+                    <a href="https://linkedin.com/in/yuvrajsinghsoni" target="_blank" class="social-link">LinkedIn</a>
                 </div>
             </div>
         </div>

@@ -43,10 +43,16 @@ const burger   = document.getElementById('burger');
 const navUl    = document.querySelector('.nav-links');
 burger?.addEventListener('click', () => {
     navUl.classList.toggle('open');
+    nav.classList.toggle('menu-open', navUl.classList.contains('open'));
+    burger.classList.toggle('active', navUl.classList.contains('open'));
     burger.setAttribute('aria-expanded', navUl.classList.contains('open'));
 });
 // Close on link click
-navUl?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navUl.classList.remove('open')));
+navUl?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navUl.classList.remove('open');
+    nav.classList.remove('menu-open');
+    burger.classList.remove('active');
+}));
 
 // ── Smooth project row hover (tilt) ──────────────────────────────────────────
 document.querySelectorAll('.project-row').forEach(card => {
